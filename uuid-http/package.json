@@ -1,0 +1,7 @@
+{
+    "name": "uuid-http",
+    "version": "0.0.1",
+    "dependencies": {
+        "uuid": "^3.0.1"
+    }
+}
