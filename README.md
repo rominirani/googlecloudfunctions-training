@@ -1,5 +1,4 @@
-# googlecloudfunctions-training
-Google Cloud Functions Video Training
+# Google Cloud Functions Video Training
 
 This project contains multiple projects that will be used during the training. Each of the projects is a Google Cloud Function that will be demonstrated during the course.
 
