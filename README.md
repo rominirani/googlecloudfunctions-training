@@ -9,3 +9,4 @@ The projects are:
  - `uuid-http` : Cloud Function with HTTP Trigger. Demonstrates use of external dependencies. 
  - `hello-gcs` : Cloud Function with GCS Trigger. It gets invoked when a file is created/updated in GCS. 
  - `hello-pubsub` : Cloud Function with PubSub Trigger. It subscribes to a topic and is invoked when a message is published to that topic. 
+ - `hello-localfunctions` : Cloud Function with HTTP Trigger. This is used to demonstrate the local functions tool and debugging functions locally.
