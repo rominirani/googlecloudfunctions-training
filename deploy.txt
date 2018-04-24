@@ -1,0 +1,28 @@
+cd bitcoinprice-http/
+gcloud beta functions deploy bitcoinPrice --trigger-http
+cd ..
+cd getrandomquote-function/
+gcloud beta functions deploy getRandomQuote --trigger-http
+cd ..
+cd hellogreeting-http/
+gcloud beta functions deploy helloGreeting --trigger-http
+cd ..
+cd helloworld-http/
+gcloud beta functions deploy helloGET --trigger-http
+cd ..
+cd uuid-http/
+gcloud beta functions deploy getUUID --trigger-http
+cd ..
+cd hello-pubsub
+gcloud beta pubsub topics create pubsubtopic1
+gcloud beta functions deploy subscribe --trigger-resource pubsubtopic1 --trigger-event google.pubsub.topic.publish
+cd ..
+cd hello-gcs
+gsutil mb gs://gcs-function-bucket1
+gcloud beta functions deploy helloGCSGeneric --trigger-resource gs://gcs-function-bucket1 --trigger-event google.storage.object.finalize 
+cd ..
+cd translation-process
+gsutil mb gs://gcs-function-translation-bucket
+gsutil mb gs://gcs-function-translation-bucket_es
+gcloud beta functions deploy processFile --trigger-resource gs://gcs-function-translation-bucket --trigger-event google.storage.object.finalize 
+
