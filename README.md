@@ -14,5 +14,24 @@ The projects are:
  - `translation-process` : Cloud Function with GCS Trigger. This function gets triggered when files are uploaded in the configured GCS Bucket. It will then invoke the Translation API to translate the documents to Spanish and place the translated files in another GCS bucket.
  - `getrandomquote-function` : Cloud Function with HTTP Trigger. This function acts as an API and returns a random quote.
  
+You can use Google Cloud Shell here to clone the repository. Simply click on the "Open in Cloud Shell" button below. This will clone the repository in your Google Cloud Account's Cloud Shell.
  
  [![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/rominirani/googlecloudfunctions-training)
+ 
+## Running Tutorials in Google Cloud Shell
+
+You will `tutorial.md` files present in the following folders of the cloned repository:
+- `helloworld-http`
+- `hellogreeting-http`
+- `uuid-http`
+- `hello-gcs`
+- `hello-pubsub`
+- `getrandomquote-function`
+
+From Google Cloud Shell, simply go to the respective folder and then launch the tutorial in Google Cloud Shell via the `teachme tutorial.md` command.
+
+For e.g. to launch the tutorial for `helloworld-http`, do the following:
+```
+$ cd helloworld-http
+$ teachme tutorial.md
+```
