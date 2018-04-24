@@ -53,6 +53,9 @@ gcloud beta functions call getUUID
 ```
 
 You should see an output that provides a unique UUID.
+```executionId: ff08h9kbj9ua
+result: 95cd0a15-4b76-45ac-b343-135e8711589d
+```
 
 ## Conclusion
 
