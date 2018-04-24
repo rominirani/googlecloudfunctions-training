@@ -1,5 +1,7 @@
 # Google Cloud Functions Training
 
+Refer to the [Google Cloud Functions Tutorial Series](https://rominirani.com/google-cloud-functions-tutorial-series-f04b2db739cd), which is a companion set of blog posts for all the examples covered here.
+
 This project contains multiple projects that will be used during the training. Each of the projects is a Google Cloud Function that will be demonstrated during the course.
 
 The projects are:
