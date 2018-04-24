@@ -1,0 +1,77 @@
+# Clear up all the functions deployed
+gcloud auth login
+gcloud config set project gcf-live-training
+gcloud beta functions list
+
+# repeat for each of the functions listed above that you want to delete
+gcloud beta functions delete fname
+
+gcloud commands
+---------------
+gcloud beta functions event-types list
+gcloud beta functions regions list
+gcloud beta functions logs read
+
+gcloud beta functions deploy helloGET --trigger-http
+gcloud beta functions list
+gcloud beta functions describe helloGET
+gcloud beta functions call helloGET
+
+gcloud beta functions deploy helloGreeting --trigger-http
+gcloud beta functions call helloGreeting --data '{"name":"Hello"}'
+gcloud beta functions logs read
+gcloud beta functions logs read --execution-id <id>
+
+# pub/sub command in gcloud
+gcloud beta pubsub topics list
+gcloud beta pubsub topics publish projects/gcf-live-training/topics/pubsubtopic1 --message Hello
+gcloud functions logs read --limit=10
+gcloud beta functions call pubsubfunction1 --data '{"data":"R29vZ2xlIENsb3VkIEZ1bmN0aW9ucw=="}' 
+
+# gcs commands in gcloud
+gsutil ls
+gsutil cp package.json gs://gcs-function-bucket1/
+gcloud beta functions logs read --limit=20
+
+# deploying pub/sub trigger based function
+gcloud beta functions deploy FUNCTION_NAME \  
+--trigger-resource [YOUR_TRIGGER_PUBSUB_TOPIC_NAME] \   
+--trigger-event google.pubsub.topic.publish
+
+# deploying gcs trigger based function
+gcloud beta functions deploy FUNCTION_NAME \   
+--trigger-resource [YOUR_TRIGGER_BUCKET_NAME] \   
+--trigger-event google.storage.object.finalize 
+
+
+Local Emulator
+--------------
+functions config set projectId <projectid>
+functions start
+functions list
+
+cd helloworld-http
+functions deploy helloGET --trigger-http
+functions list
+functions call helloGET
+functions logs read
+
+cd ..\hellogreeting-http
+functions deploy helloGreeting --trigger-http
+functions list
+functions call helloGreeting --data '{"name":"Local Emulator"}'
+functions logs read
+
+#other commands
+functions reset <fname>
+functions logs clear
+functions delete <fname>
+functions stop
+
+# Local Debugging using functions Emulator
+cd hello-localfunctions
+functions deploy localfunction --trigger-http
+functions inspect localfunction
+
+# Launch the browser and chrome://inspect and go to target and then sources , place breakpoints
+functions call localfunction
