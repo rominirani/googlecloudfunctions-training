@@ -35,3 +35,8 @@ For e.g. to launch the tutorial for `helloworld-http`, do the following:
 $ cd helloworld-http
 $ teachme tutorial.md
 ```
+
+## Other Files
+- `cleanup.txt` : Contains a set of `gcloud` commands to delete all the Google Cloud Platform resources created i.e. Cloud Functiosn, Cloud Pub/Sub Topic, Cloud Storage Bucket, etc. This script can be useful to start from scratch. Just ensure that you have done a `gcloud auth login` and `gcloud config set project <project-id>` for the particular Google Cloud Platform project.
+- `deploy.txt` : Contains a set of `gcloud` commands to deploy all the above Cloud Functions. 
+- `commands.txt` : A set of useful commands that are used throughout the training. 
