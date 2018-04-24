@@ -11,7 +11,8 @@ The projects are:
  - `hello-pubsub` : Cloud Function with PubSub Trigger. It subscribes to a topic and is invoked when a message is published to that topic. 
  - `hello-localfunctions` : Cloud Function with HTTP Trigger. This is used to demonstrate the local functions tool and debugging functions locally.
  - `bitcoinprice-http` : Cloud Function with HTTP Trigger. This function makes a call to Coinbase API for Bitcoin price and returns back a Hangouts message format. 
- - `translation-process` : Cloud Function with HTTP Trigger. This function gets triggered when files are uploaded in the configured GCS Bucket. It will then invoke the Translation API to translate the documents to Spanish and place the translated files in another GCS bucket.
+ - `translation-process` : Cloud Function with GCS Trigger. This function gets triggered when files are uploaded in the configured GCS Bucket. It will then invoke the Translation API to translate the documents to Spanish and place the translated files in another GCS bucket.
+ - `getrandomquote-function` : Cloud Function with HTTP Trigger. This function acts as an API and returns a random quote.
  
  
  [![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/rominirani/googlecloudfunctions-training)
