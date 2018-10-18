@@ -1,13 +1,13 @@
-gcloud beta functions delete bitcoinPrice
-gcloud beta functions delete getRandomQuote
-gcloud beta functions delete getUUID
-gcloud beta functions delete helloGCSGeneric
-gcloud beta functions delete helloGET
-gcloud beta functions delete helloGreeting
-gcloud beta functions delete processFile
-gcloud beta functions delete subscribe
+gcloud functions delete bitcoinPrice
+gcloud functions delete getRandomQuote
+gcloud functions delete getUUID
+gcloud functions delete helloGCSGeneric
+gcloud functions delete helloGET
+gcloud functions delete helloGreeting
+gcloud functions delete processFile
+gcloud functions delete subscribe
 
-gcloud beta pubsub topics delete pubsubtopic1
+gcloud pubsub topics delete pubsubtopic1
 gsutil rm -r gs://gcs-function-bucket1
 gsutil rm -r gs://gcs-function-translation-bucket
 gsutil rm -r gs://gcs-function-translation-bucket_es
