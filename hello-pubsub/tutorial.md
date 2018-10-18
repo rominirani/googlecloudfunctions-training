@@ -29,7 +29,7 @@ Click here: `walkthrough editor-open-file "googlecloudfunctions-training/hello-p
 First up, we should create our Pub/Sub topic as shown below:
 
 ```bash
-gcloud beta pubsub topics create pubsubtopic1
+gcloud pubsub topics create pubsubtopic1
 ```
 
 We are ready to deploy our function
@@ -37,7 +37,7 @@ We are ready to deploy our function
 Use the gcloud command to deploy the function as shown below:
 
 ```bash
-gcloud beta functions deploy subscribe --trigger-resource pubsubtopic1 --trigger-event google.pubsub.topic.publish
+gcloud functions deploy subscribe --trigger-resource pubsubtopic1 --trigger-event google.pubsub.topic.publish  --region=us-central1 --runtime=nodejs6 
 ```
 
 You should see an output that provides details on the function deployed. 
@@ -45,7 +45,7 @@ You should see an output that provides details on the function deployed.
 Check if the function has been deployed successfully via the following command:
 
 ```bash
-gcloud beta functions list
+gcloud functions list
 ```
 
 ## Invoke the Function
@@ -55,13 +55,13 @@ We are ready to invoke our function now:
 Use the gcloud command to publish a sample message to the topic :
 
 ```bash
-gcloud beta pubsub topics publish pubsubtopic1 --message Hello
+gcloud pubsub topics publish pubsubtopic1 --message Hello
 ```
 
 or 
 
 ```bash
-gcloud beta functions call subscribe --data '{"data":"R29vZ2xlIENsb3VkIEZ1bmN0aW9ucw=="}'
+gcloud functions call subscribe --data '{"data":"R29vZ2xlIENsb3VkIEZ1bmN0aW9ucw=="}'
 ```
 
 You can view the execution of the function via the logs command as shown below:
