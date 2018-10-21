@@ -1,0 +1,14 @@
+{
+  "name": "loveiscomic",
+  "version": "1.0.0",
+  "description": "LoveIsComic Puppeteer Script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romin Irani",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.9.0"
+  }
+}
