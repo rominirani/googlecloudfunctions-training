@@ -6,6 +6,7 @@ gcloud functions delete helloGET
 gcloud functions delete helloGreeting
 gcloud functions delete processFile
 gcloud functions delete subscribe
+gcloud functions delete sendComic
 
 gcloud pubsub topics delete pubsubtopic1
 gsutil rm -r gs://gcs-function-bucket1
