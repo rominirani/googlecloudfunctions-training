@@ -17,6 +17,7 @@ The projects are:
  - `getrandomquote-function` : Cloud Function with HTTP Trigger. This function acts as an API and returns a random quote.
  - `firestore-http` : Cloud Function with HTTP Trigger. This function demonstrates how to build a quiz powered by Firestore database.
  - `puppeteer` : Cloud Function with HTTP Trigger. This functions demonstrates how to use headless Chrome via Puppeteer npm library. It accesses a web page and extracts out the image from the web page. 
+ - `environment` : Cloud Function with HTTP Trigger. It demonstrates how to read Environment Variables in your function.
  
 You can use Google Cloud Shell here to clone the repository. Simply click on the "Open in Cloud Shell" button below. This will clone the repository in your Google Cloud Account's Cloud Shell.
  
