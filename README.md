@@ -16,6 +16,7 @@ The projects are:
  - `translation-process` : Cloud Function with GCS Trigger. This function gets triggered when files are uploaded in the configured GCS Bucket. It will then invoke the Translation API to translate the documents to Spanish and place the translated files in another GCS bucket.
  - `getrandomquote-function` : Cloud Function with HTTP Trigger. This function acts as an API and returns a random quote.
  - `firestore-http` : Cloud Function with HTTP Trigger. This function demonstrates how to build a quiz powered by Firestore database.
+ - `puppeteer` : Cloud Function with HTTP Trigger. This functions demonstrates how to use headless Chrome via Puppeteer npm library. It accesses a web page and extracts out the image from the web page. 
  
 You can use Google Cloud Shell here to clone the repository. Simply click on the "Open in Cloud Shell" button below. This will clone the repository in your Google Cloud Account's Cloud Shell.
  

@@ -26,3 +26,7 @@ gsutil mb gs://gcs-function-translation-bucket
 gsutil mb gs://gcs-function-translation-bucket_es
 gcloud functions deploy processFile --trigger-resource gs://gcs-function-translation-bucket --trigger-event google.storage.object.finalize  --region=us-central1 --runtime=nodejs6 
 
+cd ..
+cd puppeteer
+gcloud functions deploy sendComic --trigger-http --region=us-central1 --runtime=nodejs8 --memory=1024MB
+
