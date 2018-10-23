@@ -29,4 +29,7 @@ gcloud functions deploy processFile --trigger-resource gs://gcs-function-transla
 cd ..
 cd puppeteer
 gcloud functions deploy sendComic --trigger-http --region=us-central1 --runtime=nodejs8 --memory=1024MB
+cd..
+cd environment
+gcloud functions deploy helloVersion --trigger-http --region=us-central1 --runtime=nodejs6 
 
